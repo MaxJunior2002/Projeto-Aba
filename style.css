@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(100, 129, 224);
+    width: 100%;
+    height: 100%;
+}
+
+#login{
+    max-width: 600px !important;
+    height: 300px;
+}
+
+#login{
+    margin: 200px auto;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0 0 0);
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+#inputEmail{
+    margin: 10px auto;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#inputPassword{
+    margin: 10px auto;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+input:invalid{
+    border-color: red;
+}
+
+.button{
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+    background-color: rgb(201, 201, 201);
+}
+
+label{
+    display: inline-block;
+}
+
+span{
+    color: red;
+}
+

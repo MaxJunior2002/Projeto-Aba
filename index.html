@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Login Portal Abas</title>
+</head>
+<body onload="logar()">
+    <main>
+        <header>
+            <div class="container mw-100" id="login">
+                <div class="row align-items-center" id="login-form">
+                    <div class="col-md-10 mx-auto col-lg-12">
+                        <h2>Portal Abas Online</h2>
+                        <form>
+                            <div class="form-group mb-3">
+                                <span id="erroEmail"></span>
+                                <p>
+                                    <label for="inputEmail">Email</label>
+                                    <input type="email" id="inputEmail" placeholder="" >
+                                </p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="inputPassword">Senha</label>
+                                <input type="password" id="inputPassword" placeholder="">
+                            </div>
+                            <button class="button" type="submit" onclick="logar()">Acessar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script src="script.js"></script>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>
