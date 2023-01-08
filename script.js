@@ -30,7 +30,7 @@ function carregar () {
         }
     }
 
-    senha.onblur = () => {
+    senha.onkeyup = () => {
         if(padraoSenha.test(senha.value)){
             verificaSenha = true;
         }else{
@@ -50,7 +50,11 @@ function login(email, senha){
 }
 
 function logar(){
-    localStorage.setItem('email', 'testeemail');
-    localStorage.setItem('senha', 'teste');
-    alert('Login efetuado com sucesso!');
+    var email = document.getElementById('inputEmail');
+    var senha = document.getElementById('inputPassword');
+
+    setTimeout(alert('Login efetuado com sucesso!'), 3000);
+
+    localStorage.setItem('email', email.value);
+    localStorage.setItem('senha', senha.value);
 }
