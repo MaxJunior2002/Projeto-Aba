@@ -15,20 +15,21 @@
             <div class="container mw-100" id="login">
                 <div class="row align-items-center" id="login-form">
                     <div class="col-md-10 mx-auto col-lg-12">
-                        <h2>Portal Abas Online</h2>
+                        <h1>Portal Abas.online</h1>
                         <form>
+                            <span id="erroEmail"></span>
                             <div class="form-group mb-3">
-                                <span id="erroEmail"></span>
-                                <p>
-                                    <label for="inputEmail">Email</label>
-                                    <input type="email" id="inputEmail" placeholder="" >
-                                </p>
+                                <label for="inputEmail">Email</label>
+                                <input class="input" type="email" id="inputEmail" placeholder="Digite seu email" >
                             </div>
                             <div class="form-group mb-3">
                                 <label for="inputPassword">Senha</label>
-                                <input type="password" id="inputPassword" placeholder="">
+                                <input class="input" type="password" id="inputPassword" placeholder="Digite sua senha">
                             </div>
-                            <button id="botao" class="button" type="submit" onclick="logar()">Acessar</button>
+                            <button id="botao" onclick="logar()">
+                                <span class="button_top"> Acessar
+                                </span>
+                            </button>
                         </form>
                     </div>
                 </div>

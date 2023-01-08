@@ -1,16 +1,15 @@
 function carregar () {
 
-    var email = document.getElementById('inputEmail');
-    var senha = document.getElementById('inputPassword');
-    var erro = document.getElementById('erroEmail');
+    var email = document.querySelector("input#inputEmail");
+    var senha = document.querySelector("input#inputPassword");
+    var erro = document.querySelector("span#erroEmail");
     var padraoSenha = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[\d])(?=.*[@#$%&*!-+&*]).{8,20}$/;
     var padraoEmail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
 
-    var botao = document.getElementById('botao');
     var verificaEmail = false;
     var verificaSenha = false;
 
-    botao.disabled = true;
+    desabilitarBotao();
 
     email.onblur = () => {
         if(!padraoEmail.test(email.value)){
@@ -43,18 +42,37 @@ function carregar () {
 
 function login(email, senha){
     if(senha && email){
-        botao.disabled = false;
+        habilitarBotao();
     }else{
-        botao.disabled = true;
+        desabilitarBotao();
     }
 }
 
 function logar(){
-    var email = document.getElementById('inputEmail');
-    var senha = document.getElementById('inputPassword');
+    var email = document.querySelector("input#inputEmail");
+    var senha = document.querySelector("input#inputPassword");
 
-    setTimeout(alert('Login efetuado com sucesso!'), 3000);
+    setTimeout(
+        alert('Login efetuado com sucesso!')
+    ,5000);
+
 
     localStorage.setItem('email', email.value);
     localStorage.setItem('senha', senha.value);
+}
+
+function desabilitarBotao(){
+    var botao = document.querySelector("button#botao");
+    botao.disabled = true;
+
+    botao.classList.add('botao-desativado');
+    botao.classList.remove('botao-ativado');
+}
+
+function habilitarBotao(){
+    var botao = document.querySelector("button#botao");
+    botao.disabled = false;
+
+    botao.classList.remove('botao-desativado');
+    botao.classList.add('botao-ativado');
 }
