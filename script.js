@@ -49,13 +49,13 @@ function login(email, senha){
 }
 
 function logar(){
+    setTimeout(function(){
+        alert('Login realizado com sucesso!');
+        document.location.reload(true);
+    },3000)
+
     var email = document.querySelector("input#inputEmail");
     var senha = document.querySelector("input#inputPassword");
-
-    setTimeout(
-        alert('Login efetuado com sucesso!')
-    ,5000);
-
 
     localStorage.setItem('email', email.value);
     localStorage.setItem('senha', senha.value);
